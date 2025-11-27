@@ -1,15 +1,46 @@
 ---
+// frontmatter (din eksisterende)
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
+import Header from "../components/Header.astro";
 import { Image } from 'astro:assets';
+import '../styles/tailwind.css';
+import Cases from "./cases.astro";
+import Kontakt from "./kontakt.astro";
 import thumbsup from "../assets/images/thumbsup.png";
+import LightPost from "../assets/images/LightPost-for-landing2_original.png";
 ---
-<MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
-</MainLayout>
+
+
+<section class="relative w-full min-h-screen overflow-hidden bg-black">
+
+  <img 
+    src={LightPost.src}
+    alt="Baggrund"
+    class="absolute inset-0 w-full h-full object-cover"
+  />
+
+  <!-- Header skal ligge OVER billedet -->
+  <div class="relative z-20">
+    <Header />
+  </div>
+
+  <article class="relative z-10 p-10 text-white">
+    <h1 class="text-[100px]">NORDIC FIREFLY</h1>
+    <h2 class="text-[45px]">
+      Vi designer effektiv og pålidelig <br /> elektronik til solcelledrevne løsninger
+    </h2>
+
+    <Button>KONTAKT OS</Button>
+    <Button>VORES PRODUKT</Button>
+  </article>
+
+</section>
+
+
+
+
+
+
+
