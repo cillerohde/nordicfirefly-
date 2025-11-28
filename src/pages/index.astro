@@ -10,6 +10,7 @@ import Cases from "./cases.astro";
 import Kontakt from "./kontakt.astro";
 import thumbsup from "../assets/images/thumbsup.png";
 import LightPost from "../assets/images/LightPost-for-landing2_original.png";
+import Footer from "../components/Footer.astro";
 ---
 
 
@@ -168,8 +169,22 @@ import LightPost from "../assets/images/LightPost-for-landing2_original.png";
     <!-- Højre kolonne -->
     <div class="flex-1 flex flex-col gap-4">
       <p class="mt-4 text-[25px]">Se alle vores tidligere cases her og hvad vi tilbyder.</p>
-      <p class="mt-4 text-[25px]">Vores services & løsninger</p>
-      <p class="mt-4 text-[25px]">CASES</p>
+	  
+     <a href="/produkt" class="flex items-center mt-4 text-[25px] gap-2">
+  <img src="/src/assets/images/arrow.svg" alt="">
+  <span>Vores services & løsninger</span>
+</a>
+
+<a href="/cases" class="flex items-center mt-4 text-[25px] gap-2">
+  <img src="/src/assets/images/arrow.svg" alt="">
+  <span>CASES</span>
+</a>
+
     </div>
   </div>
 </section>
+
+
+
+
+ <Footer /> 
