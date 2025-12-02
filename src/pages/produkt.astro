@@ -10,6 +10,36 @@ const { title } = Astro.props;
 <MainLayout>
 <body>
 
+<div class="flex flex-col lg:flex-row gap-10">
+
+  <!-- Tekstkolonne -->
+  <div class="lg:w-1/2 flex flex-col justify-center px-10 lg:px-20 mt-10">
+    <p class="text-xl mb-4">LIGHTPOST<br>Produktinformation</p>
+
+    <ul class="list-disc space-y-1 ml-5">
+      <li>Ledelys til orientering om stiers forløb</li>
+      <li>Synliggøre særlige fokuspunkter</li>
+      <li>Solcelledrevet LED lys</li>
+      <li>Kabelfri</li>
+      <li>Automatisk tænd/sluk</li>
+      <li>Automatisk årstidstilpasning</li>
+      <li>Hensyntagen til biodiversiteten og dyrelivet</li>
+      <li>Minimal lysforurening</li>
+      <li>Synlighed i høj bevoksning</li>
+      <li>Opfylder kravene til belysning i miljøzoner og klasse E4</li>
+      <li>Plug-n-Play installation</li>
+      <li>Designet og udviklet i Danmark</li>
+    </ul>
+
+    <p class="mt-4">Få mere info ved at kontakte os</p>
+  </div>
+
+  <!-- Billedkolonne -->
+  <div class="lg:w-1/2 flex items-center justify-center">
+    <img src="/src/assets/images/lightpost.png" alt="" class="w-full h-full object-cover">
+  </div>
+
+</div>
 
 
 </MainLayout>
