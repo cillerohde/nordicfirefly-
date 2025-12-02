@@ -6,7 +6,64 @@ import '../styles/tailwind.css';
 import Index from "./index.astro";
 const { title } = Astro.props;
 ---
+
+
 <MainLayout>
 
-</MainLayout>
+<section class="p-10">
 
+  <!-- Wrapper der placerer tekst og form ved siden af hinanden -->
+  <div class="flex flex-col md:flex-row gap-20 items-start">
+
+    <!-- VENSTRE SIDE: Tekst -->
+    <div class="md:w-1/2">
+      <h1 class="text-[45px]">KONTAKT</h1>
+      <p class="mt-4 text-[16px]">
+        Udfyld formularen, og vi vender tilbage med svar så hurtigt som muligt.
+        <br><br>
+        Hos Nordic Firefly sælger vi vores eget produkt, Lightpost, men vi tilbyder også at integrere vores unikke teknologi i jeres produkter.
+        <br><br>
+        Hold dig opdateret på vores produktudvikling og meget mere på vores LINKEDIN.
+      </p>
+    </div>
+
+    <!-- HØJRE SIDE: FORM -->
+    <form class="md:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-10">
+
+      <!-- Navn -->
+      <div class="flex flex-col">
+        <label class="text-2xl font-medium mb-2">Navn</label>
+        <input type="text" placeholder="Dit navn" class="border-none py-2 text-gray-500" />
+      </div>
+
+      <!-- Emne -->
+      <div class="flex flex-col">
+        <label class="text-2xl font-medium mb-2">Emne</label>
+        <input type="text" placeholder="Vælg emne" class="border-none py-2 text-gray-500" />
+      </div>
+
+      <!-- Email -->
+      <div class="flex flex-col">
+        <label class="text-2xl font-medium mb-2">Email</label>
+        <input type="email" placeholder="E-mail" class="border-none py-2 text-gray-500" />
+      </div>
+
+      <!-- Firma -->
+      <div class="flex flex-col">
+        <label class="text-2xl font-medium mb-2">Firma</label>
+        <input type="text" placeholder="Skriv firma" class="border-none py-2 text-gray-500" />
+      </div>
+
+      <!-- Besked -->
+      <div class="flex flex-col md:col-span-2">
+        <label class="text-2xl font-medium mb-2">Besked</label>
+        <textarea rows="4" placeholder="Skriv din besked her" class="border-none py-2 text-gray-500 resize-none"></textarea>
+      </div>
+
+    </form>
+
+  </div>
+
+</section>
+
+</MainLayout>

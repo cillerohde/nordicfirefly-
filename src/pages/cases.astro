@@ -5,8 +5,162 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import '../styles/tailwind.css';
 import Index from "./index.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from '../components/Button.astro';
+import Link from '../components/Link.astro';
+import Header from "../components/Header.astro";
+import { Image } from 'astro:assets';
+import '../styles/tailwind.css';
+import Cases from "./cases.astro";
+import Kontakt from "./kontakt.astro";
+import thumbsup from "../assets/images/thumbsup.png";
+import LightPost from "../assets/images/LightPost-for-landing2_original.png";
+import Footer from "../components/Footer.astro";
 const { title } = Astro.props;
 ---
 <MainLayout>
+
+
+<section class="p-10">
+  <div class="flex flex-col lg:flex-row gap-10">
+    <!-- Venstre kolonne -->
+    <div class="flex-1 flex flex-col gap-4">
+      <p class="mt-4 text-[45px]">CASES</p>
+      <p>
+Her kan du se vores samarbejder med virksomheder, der har integreret vores teknologi i deres produkter for at løse deres udfordringer.
+</p>
+      <Button class="w-auto px-6">KONTAKT OS</Button>
+    </div>
+
+    <!-- Højre kolonne -->
+    <div class="flex-1 flex flex-col gap-4">
+	  
+     <a href="/produkt" class="flex items-center mt-4 text-[25px] gap-2">
+  <img src="/src/assets/images/arrow.svg" alt="">
+  <span>Vores services & løsninger</span>
+</a>
+
+<a href="/cases" class="flex items-center mt-4 text-[25px] gap-2">
+  <img src="/src/assets/images/arrow.svg" alt="">
+  <span>Rescue Ladder</span>
+</a>
+
+<a href="/cases" class="flex items-center mt-4 text-[25px] gap-2">
+  <img src="/src/assets/images/arrow.svg" alt="">
+  <span>Drinking fountains</span>
+</a>
+
+    </div>
+  </div>
+</section>
+
+<section class="p-10">
+<h1 class="text-[45px]">HVAD VI TILBYDER</h1>
+
+<div class="flex flex-col lg:flex-row gap-10">
+<div class="flex-1 flex flex-col gap-4">
+        <p class="mt-4 text-[25px]">Prototyping</p>
+      <p>
+Vi sammensætter hurtigt en prototype baseret på vores kompetencer og tidligere erfaringer ved brug af vores eksisterende komponentudvalg.</p>
+
+ <p class="mt-4 text-[25px]">Produktion</p>
+      <p>
+Vi udfører den endelige samling internt, hvor produktet gennemgår grundig konfiguration og test.</p>
+
+ <p class="mt-4 text-[25px]">Mekanik</p>
+      <p>
+Vi designer pålidelige mekaniske løsninger med høj grad af tilpasning og integration af hardware og software.</p>
+</div>
+
+
+
+<div class="flex-1 flex flex-col gap-4">
+
+<p class="mt-4 text-[25px]">Hardware</p>
+      <p>
+Vi bruger elektroniske komponenter, batterier, solpaneler og LED’er af høj kvalitet, som er både effektive og pålidelige.</p>
+
+<p class="mt-4 text-[25px]">Software</p>
+      <p>
+Vi maksimerer ydeevnen af vores komponenter gennem egenudviklet software, der spænder fra intelligent styring til fjernovervågning via IoT.</p>
+
+</div>
+</div>
+</section>
+
+<section class="p-10">
+
+<h2 class="mt-4 text-[25px]">Rescue Ladder</h2>
+
+<div class="flex flex-col lg:flex-row gap-10 mt-6">
+  <!-- Billedkolonne -->
+  <div class="flex-1">
+    <img src="/src/assets/images/produkt.png" alt="">
+
+	<p>Solar driven lightbox for Trygfonden’s Rescue Ladder</p>
+  </div>
+
+  <!-- Tekstkolonne -->
+  <div class="flex-1">
+    <p>Produktinformation</p>
+
+    <p class="list-disc ml-6 mt-4 space-y-2">
+    Produkt information  Vores løsning leverer konstant og pålidelig synlighed året rundt 
+- også under begrænset vinterlys. <br>
+
+Den består af specialudviklet elektronik, effektive LED-moduler og et robust batteri, alle designet og testet til langtidsholdbar ydeevne i krævende miljøer. 
+Løsningen kombinerer avanceret teknologi med driftssikkerhed, hvilket sikrer minimal vedligeholdelse og optimal funktionalitet over mange år.
+
+
+
+
+
+Få mere info ved at kontakte os
+    </p>
+    
+
+    <p class="mt-4">Få mere info ved at kontakte os</p>
+ <Button>KONTAKT OS</Button>
+
+  </div>
+</div>
+</section>
+
+<section class="p-10">
+
+<h2 class="mt-4 text-[25px]">Drinking fountains</h2>
+
+<div class="flex flex-col lg:flex-row gap-10 mt-6">
+  <!-- Billedkolonne -->
+  <div class="flex-1">
+    <img src="/src/assets/images/produkt.png" alt="">
+
+	<p>Solar driven lightbox for Trygfonden’s Rescue Ladder</p>
+  </div>
+
+  <!-- Tekstkolonne -->
+  <div class="flex-1">
+    <p>Produktinformation</p>
+
+    <p class="list-disc ml-6 mt-4 space-y-2">
+    Drikkefontæner i offentlige rum Solcelledrevet sensorstyring til drikkefontæner
+ Solcelledrevet løsning til Fokdals sensorstyrede drikkefontæne.
+
+<br>
+Et skjult solpanel og elektronik styrer intelligent opladning af batteriet og muliggør sensorstyret tænd/sluk-funktion af fontænen..
+
+
+
+
+Få mere info ved at kontakte os
+    </p>
+    
+
+    <p class="mt-4">Få mere info ved at kontakte os</p>
+ <Button>KONTAKT OS</Button>
+
+  </div>
+</div>
+</section>
 
 </MainLayout>
