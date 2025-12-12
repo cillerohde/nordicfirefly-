@@ -5,6 +5,8 @@ import { Image } from 'astro:assets';
 import Kontakt from "./kontakt.astro";
 import thumbsup from "../assets/images/thumbsup.png";
 import LightPost from "../assets/images/LightPost-for-landing2_original.png";
+import Havn from "../assets/images/Havn.webp";
+import DF from "../assets/images/df.webp";
 import Card from "../components/Card.astro";
 const { title } = Astro.props;
 ---
@@ -21,24 +23,25 @@ const { title } = Astro.props;
 Her kan du se vores samarbejder med virksomheder, der har integreret vores teknologi i deres produkter for at løse deres udfordringer.
 </p>
 <div>
-      <Button class="w-auto px-6">KONTAKT OS</Button>
+      <a href="/kontakt"><Button class="w-auto px-6">KONTAKT OS</Button></a>
 </div>
     </div>
 
     <!-- Højre kolonne -->
     <div class="flex-1 flex flex-col gap-4 px-10">
 	  
-     <a href="/produkt" class="flex items-center mt-4 text-[25px] gap-2">
+     <a href="#hvad-vi-tilbyder" class="flex items-center mt-4 text-[25px] gap-2 scroll-smooth">
   <img src="/src/assets/images/arrow.svg" alt="">
   <span>Vores services & løsninger</span>
 </a>
 
-<a href="/cases" class="flex items-center mt-4 text-[25px] gap-2">
+<a href="#rescue-ladder" class="flex items-center mt-4 text-[25px] gap-2">
   <img src="/src/assets/images/arrow.svg" alt="">
   <span>Rescue Ladder</span>
 </a>
 
-<a href="/cases" class="flex items-center mt-4 text-[25px] gap-2">
+
+<a href="#drinking-fountains" class="flex items-center mt-4 text-[25px] gap-2">
   <img src="/src/assets/images/arrow.svg" alt="">
   <span>Drinking fountains</span>
 </a>
@@ -48,7 +51,7 @@ Her kan du se vores samarbejder med virksomheder, der har integreret vores tekno
 </section>
 
 <section class="p-10">
-<h1 class="text-[45px]">HVAD VI TILBYDER</h1>
+<h1 id="hvad-vi-tilbyder" class="text-[45px]">HVAD VI TILBYDER</h1>
 
 <div class="flex flex-col lg:flex-row gap-10">
 <div class="flex-1 flex flex-col gap-4">
@@ -84,26 +87,6 @@ Vi maksimerer ydeevnen af vores komponenter gennem egenudviklet software, <br> d
 
 
 
-<section class="flex flex-col gap-10">
-    <Card
-      image={LightPost.src}
-      title="LIGHTPOST Produktinformation"
-      description="Ledelys til orientering om stiers forløb, solcelledrevet LED lys, kabelfri osv."
-      buttonText="Kontakt os"
-    />
-    <Card
-      
-      title="PRODUKT Information"
-      description="Her kan du indsætte beskrivelse af produktet eller teknologi."
-      buttonText="Kontakt os"
-    />
-    <Card
-      
-      title="LIGHTPOST Feature"
-      description="Her kan du indsætte en anden beskrivelse af feature eller teknologi."
-      buttonText="Kontakt os"
-    />
-  </section>
 
 
 
@@ -125,72 +108,52 @@ Vi maksimerer ydeevnen af vores komponenter gennem egenudviklet software, <br> d
 
 
 
+<div id="rescue-ladder" class="flex flex-col lg:flex-row min-h-[400px]">
 
-<div class="flex flex-col lg:flex-row gap-10 min-h-[400px] bg-customGray">
-
-  <!-- Billedkolonne -->
   <div class="lg:w-1/2 flex items-center justify-center overflow-hidden">
-  <img id="slideshow" src="/src/assets/images/lightpost.png" alt="Slideshow" class="w-full h-auto transition-opacity duration-1000">
-</div>
-<!-- Tekstkolonne -->
-<div class="lg:w-1/2 flex flex-col justify-center px-10 lg:px-20 mt-10">
-    <p class="text-xl mb-4">LIGHTPOST<br>Produktinformation</p>
+    <img src="/src/assets/images/Havn.webp" alt="" class="w-full h-auto transition-opacity duration-1000">
+  </div>
+  <div class="lg:w-1/2 flex flex-col justify-center lg:px-20 bg-zinc-100">
+    <p class="text-3xl mb-4">Rescue Ladder<br></p>
+    <p class="text-2xl mb-4">Produktinformation</p>
+   <p>Vores løsning leverer konstant og pålidelig synlighed året rundt <br>
+   - også under begrænset vinterlys. 
 
-    <ul class="list-disc space-y-1 ml-5">
-      <li>Ledelys til orientering om stiers forløb</li>
-      <li>Synliggøre særlige fokuspunkter</li>
-      <li>Solcelledrevet LED lys</li>
-      <li>Kabelfri</li>
-      <li>Automatisk tænd/sluk</li>
-      <li>Automatisk årstidstilpasning</li>
-      <li>Hensyntagen til biodiversiteten og dyrelivet</li>
-      <li>Minimal lysforurening</li>
-      <li>Synlighed i høj bevoksning</li>
-      <li>Opfylder kravene til belysning i miljøzoner og klasse E4</li>
-      <li>Plug-n-Play installation</li>
-      <li>Designet og udviklet i Danmark</li>
-    </ul>
+   <br>
+    <br>
+    Den består af specialudviklet elektronik, effektive LED-moduler og et robust batteri, alle designet og testet til langtidsholdbar ydeevne i krævende miljøer. 
+    Løsningen kombinerer avanceret teknologi med driftssikkerhed, hvilket sikrer minimal vedligeholdelse og optimal funktionalitet over mange år.</p>
 
     <p class="mt-4">Få mere info ved at kontakte os</p>
 
-<div class="py-10">
-      <Button>Kontakt os</Button>
-</div>
+  <div class="py-10">
+      <a href="/kontakt"><Button class="w-auto px-6">KONTAKT OS</Button></a>
+  </div>
 
   </div>
 
 </div>
 
 
-<div class="flex flex-col lg:flex-row gap-10 min-h-[400px]">
+<div id="drinking-fountains" class="flex flex-col lg:flex-row  min-h-[400px]">
 
   <!-- Billedkolonne -->
   <div class="lg:w-1/2 flex items-center justify-center overflow-hidden">
-  <img id="slideshow" src="/src/assets/images/lightpost.png" alt="Slideshow" class="w-full h-auto transition-opacity duration-1000">
+  <img id="slideshow" src="/src/assets/images/df.webp" alt="Slideshow" class="w-full h-auto transition-opacity duration-1000">
 </div>
 <!-- Tekstkolonne -->
-  <div class="lg:w-1/2 flex flex-col justify-center px-10 lg:px-20 mt-10 bg-customGray">
-    <p class="text-xl mb-4">LIGHTPOST<br>Produktinformation</p>
+  <div class="lg:w-1/2 flex flex-col justify-center lg:px-20 bg-zinc-100">
+    <p class="text-3xl mb-4">Drinking fountains<br>
+<p class="text-2xl mb-4">Produktinformation</p>
 
-    <ul class="list-disc space-y-1 ml-5">
-      <li>Ledelys til orientering om stiers forløb</li>
-      <li>Synliggøre særlige fokuspunkter</li>
-      <li>Solcelledrevet LED lys</li>
-      <li>Kabelfri</li>
-      <li>Automatisk tænd/sluk</li>
-      <li>Automatisk årstidstilpasning</li>
-      <li>Hensyntagen til biodiversiteten og dyrelivet</li>
-      <li>Minimal lysforurening</li>
-      <li>Synlighed i høj bevoksning</li>
-      <li>Opfylder kravene til belysning i miljøzoner og klasse E4</li>
-      <li>Plug-n-Play installation</li>
-      <li>Designet og udviklet i Danmark</li>
-    </ul>
+   <p>Drikkefontæner i offentlige rum Solcelledrevet sensorstyring til drikkefontæner. <br>
+ Solcelledrevet løsning til Fokdals sensorstyrede drikkefontæne. <br>
+Et skjult solpanel og elektronik styrer intelligent opladning af batteriet og muliggør sensorstyret tænd/sluk-funktion af fontænen.</p>
 
     <p class="mt-4">Få mere info ved at kontakte os</p>
 
 <div class="py-10">
-      <Button>Kontakt os</Button>
+      <a href="/kontakt"><Button class="w-auto px-6">KONTAKT OS</Button></a>
 </div>
 
   </div>
