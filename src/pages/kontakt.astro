@@ -13,10 +13,8 @@ const { title } = Astro.props;
 
 <section class="p-10 m-10">
 
-  <!-- Wrapper der placerer tekst og form ved siden af hinanden -->
   <div class="flex flex-col md:flex-row gap-20 items-start">
 
-    <!-- VENSTRE SIDE: Tekst -->
     <div class="md:w-1/2">
       <h1 class="text-[45px]">KONTAKT</h1>
       <p class="mt-4 text-[16px]">
@@ -24,11 +22,12 @@ const { title } = Astro.props;
         <br><br>
         Hos Nordic Firefly sælger vi vores eget produkt, Lightpost, men vi tilbyder også at integrere vores unikke teknologi i jeres produkter.
         <br><br>
-        Hold dig opdateret på vores produktudvikling og meget mere på vores LINKEDIN.
+        Hold dig opdateret på vores produktudvikling og meget mere på vores  <a href="https://www.linkedin.com/company/nordicfirefly/posts/?feedView=all" target="_blank" class="">
+    LINKEDIN.
+  </a>
       </p>
     </div>
 
-    <!-- HØJRE SIDE: FORM -->
     <form class="md:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-10">
 
       <!-- Navn -->

@@ -23,29 +23,31 @@ import '../styles/tailwind.css';
 
 
 
-<section class="p-10">
+<section class="p-15">
 
-<p class="mt-4 text-[25px]" >Vores teknologi er den eneste på markedet med disse fremragende resultater.</p>
-<a href="/cases"><Button class="mt-12">SE VORES CASES HER</Button></a>
+  <div class="space-y-5">
+<p class="mt-4 text-[35px]" >Vores teknologi er den eneste på markedet <br> med disse fremragende resultater.</p>
+<a href="/cases"><Button class="mt-20">SE VORES CASES HER</Button></a>
+</div>
 
-<div class="flex justify-between mt-12">
+<div class="flex justify-between mt-15">
   <div class="flex flex-col items-center">
     <h1 class="text-[100px]">1500+</h1>
-    <p class="text-left max-w-xs">
+    <p class="text-center max-w-xs">
       Vi har leveret solcelledrevne lysbokse til Trygfondens redningsstiger siden 2019.
     </p>
   </div>
 
   <div class="flex flex-col items-center">
     <h1 class="text-[100px]">42.500t</h1>
-    <p class="text-left max-w-xs">
+    <p class="text-center max-w-xs">
       De har lyst gennem alle årets mørke timer uden én eneste reparation eller batteriskift.
     </p>
   </div>
 
   <div class="flex flex-col items-center">
     <h1 class="text-[100px]">10-15 år</h1>
-    <p class="text-left max-w-xs">
+    <p class="text-center max-w-xs">
       Vi forventer, at batterierne holder mindst 10–15 år endnu. Lightpost bruger samme teknologi og har samme forventede levetid.
     </p>
   </div>
@@ -55,7 +57,7 @@ import '../styles/tailwind.css';
 
 <section class="p-10">
 
-<h2 class="mt-4 text-[25px]">Vores produkt</h2>
+<h2 class="mt-4 text-[35px]">Vores produkt</h2>
 
 <div class="flex flex-col lg:flex-row gap-10 mt-6">
   <!-- Billedkolonne -->
@@ -67,7 +69,7 @@ import '../styles/tailwind.css';
 
   <!-- Tekstkolonne -->
   <div class="flex-1">
-    <p>LIGHTPOST<br>Produktinformation</p>
+    <p class="text-[35px]">LIGHTPOST<br>Produktinformation</p>
 
     <ul class="list-disc ml-6 mt-4 space-y-2">
       <li>Ledelys til orientering om stiers forløb</li>
@@ -84,60 +86,87 @@ import '../styles/tailwind.css';
       <li>Designet og udviklet i Danmark</li>
     </ul>
 
+    <div class="space-y-5">
     <p class="mt-4">Få mere info ved at kontakte os</p>
-  </div>
+<a href="/kontakt"> <Button class="w-auto px-6 ">KONTAKT OS</Button></a> 
+</div>
+ </div>
 </div>
 
 </section>
 
 
 
-<section class="p-10" >
+<section class="p-10 mt-20" >
 <p class="mt-4 text-[25px]" >TEAMET</p>
 <p class="py-5">
       NORDIC FIREFLY A/S er et spin-out selskab fra Danmarks Tekniske Universitet (DTU). <br> Virksomheden er grundlagt på DTU-patenteret teknologi og dyb teknisk ekspertise inden for <br> udvikling af effektiv effekt-elektronik til solpaneler, batterier og LED.
     </p>
 
 
-<div class="flex flex-wrap gap-6 py-5">
+<div class="flex flex-wrap gap-4 py-2">
   <!-- Person 1 -->
   <div class="flex flex-col items-start">
     <img src="/src/assets/images/img1.png" alt="">
-    <p>Jørgen Kejlberg</p>
-    <p>CEO</p>
-    <p>jk@nordicfirefly.com</p>
+    <div class="space-y-0.3 mt-4">
+ <p class="text-[20px]">Jørgen Kejlberg</p>
+    <p class="text-gray-500">CEO</p>
+<p>
+  <a href="mailto:jk@nordicfirefly.com" class="underline hover:opacity-70">
+    jk@nordicfirefly.com
+  </a>
+</p>
+    </div>
   </div>
 
   <!-- Person 2 -->
   <div class="flex flex-col items-start">
     <img src="/src/assets/images/img2.png" alt="">
-    <p>Rasmus Ploug</p>
-    <p>CTO</p>
-    <p>rp@nordicfirefly.com</p>
+    <div class="space-y-1 mt-4">
+    <p class="text-[20px]">Rasmus Ploug</p>
+    <p class="text-gray-500">CTO</p>
+<p>
+  <a href="mailto:rp@nordicfirefly.com" class="underline hover:opacity-70">
+    rp@nordicfirefly.com
+  </a>
+</p>
+    </div>
   </div>
 
   <!-- Person 3 -->
   <div class="flex flex-col items-start">
     <img src="/src/assets/images/img3.png" alt="">
-    <p>Stefan Penter</p>
-    <p>Senior Software Architect</p>
-    <p>sp@nordicfirefly.com</p>
+    <div class="space-y-1 mt-4">
+    <p class="text-[20px]">Stefan Penter</p>
+    <p class="text-gray-500">Senior Software Architect</p>
+<p>
+  <a href="mailto:sp@nordicfirefly.com" class="underline hover:opacity-70">
+    sp@nordicfirefly.com
+  </a>
+</p>
+    </div>
   </div>
 
   <!-- Person 4 -->
   <div class="flex flex-col items-start">
     <img src="/src/assets/images/img4.png" alt="">
-    <p>Martin Rosenberg</p>
-    <p>Head of sales and marketing</p>
-    <p>mr@nordicfirefly.com</p>
-  </div>
+    <div class="space-y-1 mt-4">
+    <p class="text-[20px]">Martin Rosenberg</p>
+    <p class="text-gray-500">Head of sales and marketing</p>
+<p>
+  <a href="mailto:mr@nordicfirefly.com" class="underline hover:opacity-70">
+    mr@nordicfirefly.com
+  </a>
+</p>
+    </div>
+    </div>
 </div>
 
 
 </section>
 
 
-<section class="p-10">
+<section class="p-10 mt-20 mb-20">
   <div class="flex flex-col lg:flex-row gap-10">
     <!-- Venstre kolonne -->
     <div class="flex-1 flex flex-col gap-4">
