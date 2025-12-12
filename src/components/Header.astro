@@ -3,10 +3,10 @@ const pathname = Astro.url.pathname;
 const isHome = pathname === "/";
 ---
 
-<header class={`flex items-center justify-between py-6 ${isHome ? "absolute top-0 left-0 w-full z-30 px-12 py-10" : "px-12 py-10"} ${isHome ? "text-white" : "text-black"}`}>
+<header class={`flex items-center justify-between py-6 ${isHome ? "absolute top-0 left-0 w-full z-30 px-12 " : "px-12"} ${isHome ? "text-white" : "text-black"}`}>
 
   <div class="tracking-widest font-monterat text-xl px-6 md:px-12">
-    <a href="/" class="hover:opacity-70 transition">N F F</a>
+    <a href="/" class="hover:opacity-70 transition">NORDIC <br>FIREFLY</a>
   </div>
 
   <nav class={`hidden md:flex gap-10 text-xl px-6 md:px-12 ${isHome ? "text-white/80" : "text-black/80"}`}>

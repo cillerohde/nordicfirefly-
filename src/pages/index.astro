@@ -15,6 +15,7 @@ import Img1 from "../assets/images/img1.png";
 import Img2 from "../assets/images/img2.png";
 import Img3 from "../assets/images/img3.png";
 import Img4 from "../assets/images/img4.png";
+import Lightpost from "../assets/images/lightpost.png";
 
 ---
 <MainLayout>
@@ -34,23 +35,23 @@ import Img4 from "../assets/images/img4.png";
 <a href="/cases"><Button class="mt-20">SE VORES CASES HER</Button></a>
 </div>
 
-<div class="flex justify-between mt-15">
+<div id="stats-section" class="flex justify-between mt-15">
   <div class="flex flex-col items-center">
-    <h1 class="text-[100px]">1500+</h1>
+    <h1 class="text-[100px]" id="count1">0</h1>
     <p class="text-center max-w-xs">
       Vi har leveret solcelledrevne lysbokse til Trygfondens redningsstiger siden 2019.
     </p>
   </div>
 
   <div class="flex flex-col items-center">
-    <h1 class="text-[100px]">42.500t</h1>
+    <h1 class="text-[100px]" id="count2">0</h1>
     <p class="text-center max-w-xs">
       De har lyst gennem alle årets mørke timer uden én eneste reparation eller batteriskift.
     </p>
   </div>
 
   <div class="flex flex-col items-center">
-    <h1 class="text-[100px]">10-15 år</h1>
+    <h1 class="text-[100px]" id="count3">0</h1>
     <p class="text-center max-w-xs">
       Vi forventer, at batterierne holder mindst 10–15 år endnu. Lightpost bruger samme teknologi og har samme forventede levetid.
     </p>
@@ -66,7 +67,7 @@ import Img4 from "../assets/images/img4.png";
 <div class="flex flex-col lg:flex-row gap-10 mt-6">
   <!-- Billedkolonne -->
   <div class="flex-1">
-    <img src="/src/assets/images/produkt.png" alt="">
+<img id="slideshow-produkter" src="/src/assets/images/produkt.png" alt=""  class="w-full h-[700px] object-cover object-center transition-opacity duration-1000">
 
 	<p>Solar driven path and street lighting for off-grid installation</p>
   </div>
@@ -112,7 +113,7 @@ import Img4 from "../assets/images/img4.png";
   <!-- Person 1 -->
   <div class="flex flex-col items-start">
     <img src="/src/assets/images/img1.png" alt="">
-    <div class="space-y-0.3 mt-4">
+    <div class="space-y-1 mt-4">
  <p class="text-[20px]">Jørgen Kejlberg</p>
     <p class="text-gray-500">CEO</p>
 <p>
@@ -206,3 +207,61 @@ import Img4 from "../assets/images/img4.png";
 
  
 </MainLayout>
+<script>
+  function countUp(id, end, duration = 3000) {
+    const el = document.getElementById(id);
+    let start = 0;
+    const increment = end / (duration / 20);
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= end) {
+        start = end;
+        clearInterval(timer);
+      }
+      el.innerText = Math.floor(start).toLocaleString() + 
+                     (id === 'count2' ? 't' : id === 'count3' ? ' år' : '+');
+    }, 20);
+  }
+
+  // Funktion som observerer sektionen
+  const statsSection = document.getElementById('stats-section');
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          countUp('count1', 1500);
+          countUp('count2', 42500);
+          countUp('count3', 10);
+          observer.unobserve(entry.target); // sørger for animation kun kører én gang
+        }
+      });
+    },
+    { threshold: 0.5 } // 
+  );
+
+  observer.observe(statsSection);
+
+
+
+    const produktImages = [
+    '/src/assets/images/produkt.png',
+    '/src/assets/images/lightpost.png',
+    '/src/assets/images/produkt3.png' 
+  ];
+
+  let produktIndex = 0;
+  const produktSlideshow = document.getElementById("slideshow-produkter");
+
+  function nextProduktImage() {
+    produktSlideshow.style.opacity = 0;
+
+    setTimeout(() => {
+      produktIndex = (produktIndex + 1) % produktImages.length;
+      produktSlideshow.src = produktImages[produktIndex];
+      produktSlideshow.style.opacity = 1;
+    }, 500); 
+  }
+
+  setInterval(nextProduktImage, 4000); 
+</script>
