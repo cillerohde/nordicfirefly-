@@ -1,23 +1,14 @@
-
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import '../styles/tailwind.css';
-import Index from "./index.astro";
-import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import Header from "../components/Header.astro";
 import { Image } from 'astro:assets';
-import '../styles/tailwind.css';
-import Cases from "./cases.astro";
 import Kontakt from "./kontakt.astro";
 import thumbsup from "../assets/images/thumbsup.png";
 import LightPost from "../assets/images/LightPost-for-landing2_original.png";
-import Footer from "../components/Footer.astro";
+import Card from "../components/Card.astro";
 const { title } = Astro.props;
 ---
+
 <MainLayout>
 
 
@@ -29,11 +20,13 @@ const { title } = Astro.props;
       <p>
 Her kan du se vores samarbejder med virksomheder, der har integreret vores teknologi i deres produkter for at løse deres udfordringer.
 </p>
+<div>
       <Button class="w-auto px-6">KONTAKT OS</Button>
+</div>
     </div>
 
     <!-- Højre kolonne -->
-    <div class="flex-1 flex flex-col gap-4">
+    <div class="flex-1 flex flex-col gap-4 px-10">
 	  
      <a href="/produkt" class="flex items-center mt-4 text-[25px] gap-2">
   <img src="/src/assets/images/arrow.svg" alt="">
@@ -61,15 +54,15 @@ Her kan du se vores samarbejder med virksomheder, der har integreret vores tekno
 <div class="flex-1 flex flex-col gap-4">
         <p class="mt-4 text-[25px]">Prototyping</p>
       <p>
-Vi sammensætter hurtigt en prototype baseret på vores kompetencer og tidligere erfaringer ved brug af vores eksisterende komponentudvalg.</p>
+Vi sammensætter hurtigt en prototype baseret på vores kompetencer <br>og tidligere erfaringer ved brug af vores eksisterende komponentudvalg.</p>
 
  <p class="mt-4 text-[25px]">Produktion</p>
       <p>
-Vi udfører den endelige samling internt, hvor produktet gennemgår grundig konfiguration og test.</p>
+Vi udfører den endelige samling internt, <br> hvor produktet gennemgår grundig konfiguration og test.</p>
 
  <p class="mt-4 text-[25px]">Mekanik</p>
       <p>
-Vi designer pålidelige mekaniske løsninger med høj grad af tilpasning og integration af hardware og software.</p>
+Vi designer pålidelige mekaniske løsninger med høj grad af tilpasning <br>og integration af hardware og software.</p>
 </div>
 
 
@@ -78,89 +71,131 @@ Vi designer pålidelige mekaniske løsninger med høj grad af tilpasning og inte
 
 <p class="mt-4 text-[25px]">Hardware</p>
       <p>
-Vi bruger elektroniske komponenter, batterier, solpaneler og LED’er af høj kvalitet, som er både effektive og pålidelige.</p>
+Vi bruger elektroniske komponenter, batterier, solpaneler og LED’er af høj kvalitet,<br>som er både effektive og pålidelige.</p>
 
 <p class="mt-4 text-[25px]">Software</p>
       <p>
-Vi maksimerer ydeevnen af vores komponenter gennem egenudviklet software, der spænder fra intelligent styring til fjernovervågning via IoT.</p>
+Vi maksimerer ydeevnen af vores komponenter gennem egenudviklet software, <br> der spænder fra intelligent styring til fjernovervågning via IoT.</p>
 
 </div>
 </div>
 </section>
 
-<section class="p-10">
 
-<h2 class="mt-4 text-[25px]">Rescue Ladder</h2>
 
-<div class="flex flex-col lg:flex-row gap-10 mt-6">
+
+<section class="flex flex-col gap-10">
+    <Card
+      image={LightPost.src}
+      title="LIGHTPOST Produktinformation"
+      description="Ledelys til orientering om stiers forløb, solcelledrevet LED lys, kabelfri osv."
+      buttonText="Kontakt os"
+    />
+    <Card
+      
+      title="PRODUKT Information"
+      description="Her kan du indsætte beskrivelse af produktet eller teknologi."
+      buttonText="Kontakt os"
+    />
+    <Card
+      
+      title="LIGHTPOST Feature"
+      description="Her kan du indsætte en anden beskrivelse af feature eller teknologi."
+      buttonText="Kontakt os"
+    />
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-col lg:flex-row gap-10 min-h-[400px] bg-customGray">
+
   <!-- Billedkolonne -->
-  <div class="flex-1">
-    <img src="/src/assets/images/produkt.png" alt="">
+  <div class="lg:w-1/2 flex items-center justify-center overflow-hidden">
+  <img id="slideshow" src="/src/assets/images/lightpost.png" alt="Slideshow" class="w-full h-auto transition-opacity duration-1000">
+</div>
+<!-- Tekstkolonne -->
+<div class="lg:w-1/2 flex flex-col justify-center px-10 lg:px-20 mt-10">
+    <p class="text-xl mb-4">LIGHTPOST<br>Produktinformation</p>
 
-	<p>Solar driven lightbox for Trygfonden’s Rescue Ladder</p>
-  </div>
-
-  <!-- Tekstkolonne -->
-  <div class="flex-1">
-    <p>Produktinformation</p>
-
-    <p class="list-disc ml-6 mt-4 space-y-2">
-    Produkt information  Vores løsning leverer konstant og pålidelig synlighed året rundt 
-- også under begrænset vinterlys. <br>
-
-Den består af specialudviklet elektronik, effektive LED-moduler og et robust batteri, alle designet og testet til langtidsholdbar ydeevne i krævende miljøer. 
-Løsningen kombinerer avanceret teknologi med driftssikkerhed, hvilket sikrer minimal vedligeholdelse og optimal funktionalitet over mange år.
-
-
-
-
-
-Få mere info ved at kontakte os
-    </p>
-    
+    <ul class="list-disc space-y-1 ml-5">
+      <li>Ledelys til orientering om stiers forløb</li>
+      <li>Synliggøre særlige fokuspunkter</li>
+      <li>Solcelledrevet LED lys</li>
+      <li>Kabelfri</li>
+      <li>Automatisk tænd/sluk</li>
+      <li>Automatisk årstidstilpasning</li>
+      <li>Hensyntagen til biodiversiteten og dyrelivet</li>
+      <li>Minimal lysforurening</li>
+      <li>Synlighed i høj bevoksning</li>
+      <li>Opfylder kravene til belysning i miljøzoner og klasse E4</li>
+      <li>Plug-n-Play installation</li>
+      <li>Designet og udviklet i Danmark</li>
+    </ul>
 
     <p class="mt-4">Få mere info ved at kontakte os</p>
- <Button>KONTAKT OS</Button>
 
-  </div>
+<div class="py-10">
+      <Button>Kontakt os</Button>
 </div>
-</section>
 
-<section class="p-10">
-
-<h2 class="mt-4 text-[25px]">Drinking fountains</h2>
-
-<div class="flex flex-col lg:flex-row gap-10 mt-6">
-  <!-- Billedkolonne -->
-  <div class="flex-1">
-    <img src="/src/assets/images/produkt.png" alt="">
-
-	<p>Solar driven lightbox for Trygfonden’s Rescue Ladder</p>
   </div>
 
-  <!-- Tekstkolonne -->
-  <div class="flex-1">
-    <p>Produktinformation</p>
-
-    <p class="list-disc ml-6 mt-4 space-y-2">
-    Drikkefontæner i offentlige rum Solcelledrevet sensorstyring til drikkefontæner
- Solcelledrevet løsning til Fokdals sensorstyrede drikkefontæne.
-
-<br>
-Et skjult solpanel og elektronik styrer intelligent opladning af batteriet og muliggør sensorstyret tænd/sluk-funktion af fontænen..
+</div>
 
 
+<div class="flex flex-col lg:flex-row gap-10 min-h-[400px]">
 
+  <!-- Billedkolonne -->
+  <div class="lg:w-1/2 flex items-center justify-center overflow-hidden">
+  <img id="slideshow" src="/src/assets/images/lightpost.png" alt="Slideshow" class="w-full h-auto transition-opacity duration-1000">
+</div>
+<!-- Tekstkolonne -->
+  <div class="lg:w-1/2 flex flex-col justify-center px-10 lg:px-20 mt-10 bg-customGray">
+    <p class="text-xl mb-4">LIGHTPOST<br>Produktinformation</p>
 
-Få mere info ved at kontakte os
-    </p>
-    
+    <ul class="list-disc space-y-1 ml-5">
+      <li>Ledelys til orientering om stiers forløb</li>
+      <li>Synliggøre særlige fokuspunkter</li>
+      <li>Solcelledrevet LED lys</li>
+      <li>Kabelfri</li>
+      <li>Automatisk tænd/sluk</li>
+      <li>Automatisk årstidstilpasning</li>
+      <li>Hensyntagen til biodiversiteten og dyrelivet</li>
+      <li>Minimal lysforurening</li>
+      <li>Synlighed i høj bevoksning</li>
+      <li>Opfylder kravene til belysning i miljøzoner og klasse E4</li>
+      <li>Plug-n-Play installation</li>
+      <li>Designet og udviklet i Danmark</li>
+    </ul>
 
     <p class="mt-4">Få mere info ved at kontakte os</p>
- <Button>KONTAKT OS</Button>
+
+<div class="py-10">
+      <Button>Kontakt os</Button>
+</div>
 
   </div>
+
 </div>
-</section>
+
 
 </MainLayout>

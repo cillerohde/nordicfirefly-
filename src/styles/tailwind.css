@@ -1,25 +1,24 @@
-@import "tailwindcss";
-
-@plugin "@tailwindcss/typography";
-@plugin "@tailwindcss/forms";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-
+@import "tailwindcss";
 @import "tailwindcss-animated";
 @import "tailwindcss-intersect";
 
-/* Her kan du lægge dine egne Tailwind theme tokens hvis du får brug for det */
+/* @plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms"; 
+
 @theme {
   --font-sans: "Montserrat", sans-serif;
-}
+} */
 
-.home header {
+/* custom css */
+
+/* .home header {
   @apply text-white;
 }
 
 .home header nav {
   @apply text-white/80;
-}
-
+} */
 
 
 /* Base layer */

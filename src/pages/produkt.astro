@@ -4,43 +4,37 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import '../styles/tailwind.css';
 import Index from "./index.astro";
+import Button from "../components/Button.astro";
 const { title } = Astro.props;
 ---
 
 <MainLayout>
-<body>
 
-<div class="flex flex-col lg:flex-row gap-10">
-
-  <!-- Tekstkolonne -->
-  <div class="lg:w-1/2 flex flex-col justify-center px-10 lg:px-20 mt-10">
-    <p class="text-xl mb-4">LIGHTPOST<br>Produktinformation</p>
-
-    <ul class="list-disc space-y-1 ml-5">
-      <li>Ledelys til orientering om stiers forløb</li>
-      <li>Synliggøre særlige fokuspunkter</li>
-      <li>Solcelledrevet LED lys</li>
-      <li>Kabelfri</li>
-      <li>Automatisk tænd/sluk</li>
-      <li>Automatisk årstidstilpasning</li>
-      <li>Hensyntagen til biodiversiteten og dyrelivet</li>
-      <li>Minimal lysforurening</li>
-      <li>Synlighed i høj bevoksning</li>
-      <li>Opfylder kravene til belysning i miljøzoner og klasse E4</li>
-      <li>Plug-n-Play installation</li>
-      <li>Designet og udviklet i Danmark</li>
-    </ul>
-
-    <p class="mt-4">Få mere info ved at kontakte os</p>
-  </div>
+   <div class="flex flex-col lg:flex-row gap-10">
 
   <!-- Billedkolonne -->
   <div class="lg:w-1/2 flex items-center justify-center overflow-hidden">
   <img id="slideshow" src="/src/assets/images/lightpost.png" alt="Slideshow" class="w-full h-auto transition-opacity duration-1000">
 </div>
+<!-- Tekstkolonne -->
+  <div class="lg:w-1/2 flex flex-col justify-center px-10 lg:px-20 mt-10">
+    <p class="text-3xl mb-4">LIGHTPOST<br>Produktinformation</p>
+
+    <p>Vores løsning leverer konstant og pålidelig synlighed året rundt 
+<br> - også under begrænset vinterlys. 
 
 
 
+<p><br> Den består af specialudviklet elektronik, effektive LED-moduler og et robust batteri, alle designet og testet til langtidsholdbar ydeevne i krævende miljøer. 
+Løsningen kombinerer avanceret teknologi med driftssikkerhed, hvilket sikrer minimal vedligeholdelse og optimal funktionalitet over mange år.</p>
+</p>
+    <p class="mt-4"> <br> Få mere info ved at kontakte os</p>
+
+<div class="py-10">
+    <a href="/kontakt">  <Button>Kontakt os</Button></a>
+</div>
+
+  </div>
 
 </div>
 

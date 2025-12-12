@@ -1,14 +1,49 @@
 ---
+const { variant = "" } = Astro.props;
+
+// Hvis det er Hero-knap
+const isHero = variant === "hero";
+
+// Baggrund og tekstfarve
+const bgClass = isHero 
+  ? "bg-white/20 text-black backdrop-blur-lg"  // Hero-knapper
+  : "bg-[#2A292C] text-white backdrop-blur-lg"; // Alle andre
+
+// Border: let forskel for Hero-knap
+const borderClass = isHero ? "border border-white/30 text-white" : "border border-black/30";
 ---
-<button class="
+
+<button class={`
   px-6 py-3 
-  border border-white/30 
   rounded-xl 
-  bg-white/20 
-  backdrop-blur-lg 
   shadow-lg
-">
+  cursor-pointer  backdrop-blur-lg 
+  ${bgClass}
+  ${borderClass}
+`}>
   <slot />
 </button>
 
 
+
+
+<!-- ---
+const pathname = Astro.url.pathname;
+const isHome = pathname === "/";
+const bgClass = isHome ? "bg-white/20" : "bg-[#2A292C] text-white";
+---
+
+<button class={`
+  px-6 py-3 
+  border border-white/30 
+  rounded-xl 
+  ${bgClass} 
+  backdrop-blur-lg 
+  shadow-lg
+  cursor-pointer
+`}>
+  <slot />
+</button>
+
+
+ -->
