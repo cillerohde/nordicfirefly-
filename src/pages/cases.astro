@@ -9,6 +9,7 @@ import Havn from "../assets/images/Havn.webp";
 import DF from "../assets/images/Df.webp";
 import Rl from "../assets/images/rl.jpg";
 import Card from "../components/Card.astro";
+import Arrow from "../assets/images/arrow.svg";
 const { title } = Astro.props;
 ---
 
@@ -32,18 +33,18 @@ Her kan du se vores samarbejder med virksomheder, der har integreret vores tekno
     <div class="flex-1 flex flex-col gap-4 px-10">
 	  
      <a href="#hvad-vi-tilbyder" class="flex items-center mt-4 text-[25px] gap-2 scroll-smooth">
-  <img src="/src/assets/images/arrow.svg" alt="">
+  <img src={Arrow.src} alt="">
   <span>Vores services & løsninger</span>
 </a>
 
 <a href="#rescue-ladder" class="flex items-center mt-4 text-[25px] gap-2">
-  <img src="/src/assets/images/arrow.svg" alt="">
+  <img src={Arrow.src} alt="">
   <span>Rescue Ladder</span>
 </a>
 
 
 <a href="#drinking-fountains" class="flex items-center mt-4 text-[25px] gap-2">
-  <img src="/src/assets/images/arrow.svg" alt="">
+  <img src={Arrow.src} alt="">
   <span>Drinking fountains</span>
 </a>
 
@@ -113,7 +114,7 @@ Vi maksimerer ydeevnen af vores komponenter gennem egenudviklet software, <br> d
 
   <div class="lg:w-1/2 flex items-center justify-center overflow-hidden">
 <div class="relative w-full h-auto overflow-hidden">
-  <img id="havn-slideshow" src="/src/assets/images/Havn.webp" alt="Slideshow" class="w-full h-[800px] object-cover transition-opacity duration-1000">
+  <img id="havn-slideshow" src={Havn.src} alt="Slideshow" class="w-full h-[800px] object-cover transition-opacity duration-1000">
 </div>
   </div>
   <div class="lg:w-1/2 flex flex-col justify-center lg:px-20 bg-zinc-100">
@@ -142,7 +143,7 @@ Vi maksimerer ydeevnen af vores komponenter gennem egenudviklet software, <br> d
 
   <!-- Billedkolonne -->
   <div class="lg:w-1/2 flex items-center justify-center overflow-hidden">
-  <img id="slideshow" src="/src/assets/images/Df.webp" alt="Slideshow" class="w-full h-auto transition-opacity duration-1000">
+  <img id="slideshow" src={DF.src} alt="Slideshow" class="w-full h-auto transition-opacity duration-1000">
 </div>
 <!-- Tekstkolonne -->
   <div class="lg:w-1/2 flex flex-col justify-center lg:px-20 bg-zinc-100">

@@ -16,6 +16,8 @@ import Img2 from "../assets/images/img2.png";
 import Img3 from "../assets/images/img3.png";
 import Img4 from "../assets/images/img4.png";
 import Lightpost from "../assets/images/lightpost.png";
+import Arrow from "../assets/images/arrow.svg";
+
 
 ---
 <MainLayout>
@@ -112,7 +114,7 @@ import Lightpost from "../assets/images/lightpost.png";
 <div class="flex flex-wrap gap-4 py-2">
   <!-- Person 1 -->
   <div class="flex flex-col items-start">
-    <img src="/src/assets/images/img1.png" alt="">
+    <img src={Img1.src} alt="">
     <div class="space-y-1 mt-4">
  <p class="text-[20px]">Jørgen Kejlberg</p>
     <p class="text-gray-500">CEO</p>
@@ -126,7 +128,7 @@ import Lightpost from "../assets/images/lightpost.png";
 
   <!-- Person 2 -->
   <div class="flex flex-col items-start">
-    <img src="/src/assets/images/img2.png" alt="">
+    <img src={Img2.src} alt="">
     <div class="space-y-1 mt-4">
     <p class="text-[20px]">Rasmus Ploug</p>
     <p class="text-gray-500">CTO</p>
@@ -140,7 +142,7 @@ import Lightpost from "../assets/images/lightpost.png";
 
   <!-- Person 3 -->
   <div class="flex flex-col items-start">
-    <img src="/src/assets/images/img3.png" alt="">
+    <img src={Img3.src} alt="">
     <div class="space-y-1 mt-4">
     <p class="text-[20px]">Stefan Penter</p>
     <p class="text-gray-500">Senior Software Architect</p>
@@ -154,7 +156,7 @@ import Lightpost from "../assets/images/lightpost.png";
 
   <!-- Person 4 -->
   <div class="flex flex-col items-start">
-    <img src="/src/assets/images/img4.png" alt="">
+    <img src={Img4.src} alt="">
     <div class="space-y-1 mt-4">
     <p class="text-[20px]">Martin Rosenberg</p>
     <p class="text-gray-500">Head of sales and marketing</p>
@@ -188,12 +190,12 @@ import Lightpost from "../assets/images/lightpost.png";
       <p class="mt-4 text-[25px]">Se alle vores tidligere cases her og hvad vi tilbyder.</p>
 	  
      <a href="/produkt" class="flex items-center mt-4 text-[25px] gap-2">
-  <img src="/src/assets/images/arrow.svg" alt="">
+  <img src={Arrow.src} alt="">
   <span>Vores services & løsninger</span>
 </a>
 
 <a href="/cases" class="flex items-center mt-4 text-[25px] gap-2">
-  <img src="/src/assets/images/arrow.svg" alt="">
+  <img src={Arrow.src} alt="">
   <span>CASES</span>
 </a>
 
