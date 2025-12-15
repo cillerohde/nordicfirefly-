@@ -114,7 +114,10 @@ Vi maksimerer ydeevnen af vores komponenter gennem egenudviklet software, <br> d
 
   <div class="lg:w-1/2 flex items-center justify-center overflow-hidden">
 <div class="relative w-full h-auto overflow-hidden">
-  <img id="havn-slideshow" src={Havn.src} alt="Slideshow" class="w-full h-[800px] object-cover transition-opacity duration-1000">
+  <img id="havn-slideshow" src={Havn.src} alt="Slideshow"
+   loading="lazy"
+      style="width: height: auto;"
+  class="w-full h-[800px] object-cover transition-opacity duration-1000">
 </div>
   </div>
   <div class="lg:w-1/2 flex flex-col justify-center lg:px-20 bg-zinc-100">
@@ -143,7 +146,7 @@ Vi maksimerer ydeevnen af vores komponenter gennem egenudviklet software, <br> d
 
   <!-- Billedkolonne -->
   <div class="lg:w-1/2 flex items-center justify-center overflow-hidden">
-  <img id="slideshow" src={DF.src} alt="Slideshow" class="w-full h-auto transition-opacity duration-1000">
+  <img id="slideshow" src={DF.src} alt="Slideshow" loading="lazy" class="w-full h-auto transition-opacity duration-1000">
 </div>
 <!-- Tekstkolonne -->
   <div class="lg:w-1/2 flex flex-col justify-center lg:px-20 bg-zinc-100">
