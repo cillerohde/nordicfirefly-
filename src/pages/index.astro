@@ -1,85 +1,77 @@
 ---
-// frontmatter (din eksisterende)
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
 import '../styles/tailwind.css';
 
-import Img1 from "~/assets/images/img1.webp";
-import Img2 from "~/assets/images/img2.webp";
-import Img3 from "~/assets/images/img3.webp";
-import Img4 from "~/assets/images/img4.webp";
+// ✅ Billeder importeres med relative stier
+import Img1 from "../assets/images/img1.webp";
+import Img2 from "../assets/images/img2.webp";
+import Img3 from "../assets/images/img3.webp";
+import Img4 from "../assets/images/img4.webp";
 
-import Lightpost from "~/assets/images/lightpost.webp";
-import Produkt from "~/assets/images/produkt.webp";
-import Produkt3 from "~/assets/images/produkt3.webp";
-import Arrow from "~/assets/images/arrow.svg";
-
-
-
+import Lightpost from "../assets/images/lightpost.webp";
+import Produkt from "../assets/images/produkt.webp";
+import Produkt3 from "../assets/images/produkt3.webp";
+import Arrow from "../assets/images/arrow.svg";
 ---
-<MainLayout>
 
+<MainLayout>
   <Hero /> 
 
 <body class="home font-sans">
 
-  <!-- resten af forsiden -->
-
-
-
 <section class="p-15">
-
   <div class="space-y-5">
-<p class="mt-4 text-[35px]" >Vores teknologi er den eneste på markedet <br> med disse fremragende resultater.</p>
-<a href="/cases"><Button class="mt-20">SE VORES CASES HER</Button></a>
-</div>
-
-<div id="stats-section" class="flex justify-between mt-15">
-  <div class="flex flex-col items-center">
-    <h1 class="text-[100px]" id="count1">0</h1>
-    <p class="text-center max-w-xs">
-      Vi har leveret solcelledrevne lysbokse til Trygfondens redningsstiger siden 2019.
+    <p class="mt-4 text-[35px]">
+      Vores teknologi er den eneste på markedet <br> med disse fremragende resultater.
     </p>
+    <a href="/cases"><Button class="mt-20">SE VORES CASES HER</Button></a>
   </div>
 
-  <div class="flex flex-col items-center">
-    <h1 class="text-[100px]" id="count2">0</h1>
-    <p class="text-center max-w-xs">
-      De har lyst gennem alle årets mørke timer uden én eneste reparation eller batteriskift.
-    </p>
-  </div>
+  <div id="stats-section" class="flex justify-between mt-15">
+    <div class="flex flex-col items-center">
+      <h1 class="text-[100px]" id="count1">0</h1>
+      <p class="text-center max-w-xs">
+        Vi har leveret solcelledrevne lysbokse til Trygfondens redningsstiger siden 2019.
+      </p>
+    </div>
 
-  <div class="flex flex-col items-center">
-    <h1 class="text-[100px]" id="count3">0</h1>
-    <p class="text-center max-w-xs">
-      Vi forventer, at batterierne holder mindst 10–15 år endnu. Lightpost bruger samme teknologi og har samme forventede levetid.
-    </p>
-  </div>
-</div>
+    <div class="flex flex-col items-center">
+      <h1 class="text-[100px]" id="count2">0</h1>
+      <p class="text-center max-w-xs">
+        De har lyst gennem alle årets mørke timer uden én eneste reparation eller batteriskift.
+      </p>
+    </div>
 
+    <div class="flex flex-col items-center">
+      <h1 class="text-[100px]" id="count3">0</h1>
+      <p class="text-center max-w-xs">
+        Vi forventer, at batterierne holder mindst 10–15 år endnu. Lightpost bruger samme teknologi og har samme forventede levetid.
+      </p>
+    </div>
+  </div>
 </section>
 
 <section class="p-10">
-
 <h2 class="mt-4 text-[35px]">Vores produkt</h2>
 
 <div class="flex flex-col lg:flex-row gap-10 mt-6">
   <!-- Billedkolonne -->
   <div class="flex-1">
-<img id="slideshow-produkter" src={Lightpost.src}  data-images={[Produkt.src, Lightpost.src, Produkt3.src].join(',')}
-
- alt=""  loading="lazy"
- class="w-full h-[700px] object-cover object-center transition-opacity duration-1000">
-
-	<p>Solar driven path and street lighting for off-grid installation</p>
+    <img id="slideshow-produkter"
+         src={Lightpost.src}
+         data-images={`${Produkt.src},${Lightpost.src},${Produkt3.src}`}
+         alt=""  
+         loading="lazy"
+         class="w-full h-[700px] object-cover object-center transition-opacity duration-1000">
+    <p>Solar driven path and street lighting for off-grid installation</p>
   </div>
 
   <!-- Tekstkolonne -->
   <div class="flex-1">
     <p class="text-[35px]">LIGHTPOST<br>Produktinformation</p>
-
     <ul class="list-disc ml-6 mt-4 space-y-2">
       <li>Ledelys til orientering om stiers forløb</li>
       <li>Synliggøre særlige fokuspunkter</li>
@@ -96,156 +88,94 @@ import Arrow from "~/assets/images/arrow.svg";
     </ul>
 
     <div class="space-y-5">
-    <p class="mt-4">Få mere info ved at kontakte os</p>
-<a href="/kontakt"> <Button class="w-auto px-6 ">KONTAKT OS</Button></a> 
+      <p class="mt-4">Få mere info ved at kontakte os</p>
+      <a href="/kontakt"><Button class="w-auto px-6">KONTAKT OS</Button></a> 
+    </div>
+  </div>
 </div>
- </div>
-</div>
-
 </section>
 
+<section class="p-10 mt-20">
+  <p class="mt-4 text-[25px]">TEAMET</p>
+  <p class="py-5">
+    NORDIC FIREFLY A/S er et spin-out selskab fra Danmarks Tekniske Universitet (DTU). <br>
+    Virksomheden er grundlagt på DTU-patenteret teknologi og dyb teknisk ekspertise inden for <br>
+    udvikling af effektiv effekt-elektronik til solpaneler, batterier og LED.
+  </p>
 
+  <div class="flex flex-wrap gap-4 py-2 justify-start">
+    <!-- Person 1 -->
+    <div class="flex flex-col items-start">
+      <img src={Img1.src} alt="" loading="lazy" width="400" height="400" style="width: 330px; height: auto;">
+      <div class="space-y-1 mt-4">
+        <p class="text-[20px]">Jørgen Kejlberg</p>
+        <p class="text-gray-500">CEO</p>
+        <p><a href="mailto:jk@nordicfirefly.com" class="underline hover:opacity-70">jk@nordicfirefly.com</a></p>
+      </div>
+    </div>
 
-<section class="p-10 mt-20" >
-<p class="mt-4 text-[25px]" >TEAMET</p>
-<p class="py-5">
-      NORDIC FIREFLY A/S er et spin-out selskab fra Danmarks Tekniske Universitet (DTU). <br> Virksomheden er grundlagt på DTU-patenteret teknologi og dyb teknisk ekspertise inden for <br> udvikling af effektiv effekt-elektronik til solpaneler, batterier og LED.
-    </p>
+    <!-- Person 2 -->
+    <div class="flex flex-col items-start">
+      <img src={Img2.src} alt="" loading="lazy" width="400" height="400" style="width: 330px; height: auto;">
+      <div class="space-y-1 mt-4">
+        <p class="text-[20px]">Rasmus Ploug</p>
+        <p class="text-gray-500">CTO</p>
+        <p><a href="mailto:rp@nordicfirefly.com" class="underline hover:opacity-70">rp@nordicfirefly.com</a></p>
+      </div>
+    </div>
 
+    <!-- Person 3 -->
+    <div class="flex flex-col items-start">
+      <img src={Img3.src} alt="" loading="lazy" width="400" height="400" style="width: 330px; height: auto;">
+      <div class="space-y-1 mt-4">
+        <p class="text-[20px]">Stefan Penter</p>
+        <p class="text-gray-500">Senior Software Architect</p>
+        <p><a href="mailto:sp@nordicfirefly.com" class="underline hover:opacity-70">sp@nordicfirefly.com</a></p>
+      </div>
+    </div>
 
-<div class="flex flex-wrap gap-4 py-2 justify-start">
-  <!-- Person 1 -->
-  <div class="flex flex-col items-start">
-    <img 
-      src={Img1.src} 
-      alt=""
-      loading="lazy"
-      width="400"
-      height="400"
-      style="width: 330px; height: auto;"
-    >
-    <div class="space-y-1 mt-4">
-      <p class="text-[20px]">Jørgen Kejlberg</p>
-      <p class="text-gray-500">CEO</p>
-      <p>
-        <a href="mailto:jk@nordicfirefly.com" class="underline hover:opacity-70">
-          jk@nordicfirefly.com
-        </a>
-      </p>
+    <!-- Person 4 -->
+    <div class="flex flex-col items-start">
+      <img src={Img4.src} alt="" loading="lazy" width="400" height="400" style="width: 330px; height: auto;">
+      <div class="space-y-1 mt-4">
+        <p class="text-[20px]">Martin Rosenberg</p>
+        <p class="text-gray-500">Head of sales and marketing</p>
+        <p><a href="mailto:mr@nordicfirefly.com" class="underline hover:opacity-70">mr@nordicfirefly.com</a></p>
+      </div>
     </div>
   </div>
-
-  <!-- Person 2 -->
-  <div class="flex flex-col items-start">
-    <img 
-      src={Img2.src} 
-      alt=""
-      loading="lazy"
-      width="400"
-      height="400"
-      style="width: 330px; height: auto;"
-    >
-    <div class="space-y-1 mt-4">
-      <p class="text-[20px]">Rasmus Ploug</p>
-      <p class="text-gray-500">CTO</p>
-      <p>
-        <a href="mailto:rp@nordicfirefly.com" class="underline hover:opacity-70">
-          rp@nordicfirefly.com
-        </a>
-      </p>
-    </div>
-  </div>
-
-  <!-- Person 3 -->
-  <div class="flex flex-col items-start">
-    <img 
-      src={Img3.src} 
-      alt=""
-      loading="lazy"
-      width="400"
-      height="400"
-      style="width: 330px; height: auto;"
-    >
-    <div class="space-y-1 mt-4">
-      <p class="text-[20px]">Stefan Penter</p>
-      <p class="text-gray-500">Senior Software Architect</p>
-      <p>
-        <a href="mailto:sp@nordicfirefly.com" class="underline hover:opacity-70">
-          sp@nordicfirefly.com
-        </a>
-      </p>
-    </div>
-  </div>
-
-  <!-- Person 4 -->
-  <div class="flex flex-col items-start">
-    <img 
-      src={Img4.src} 
-      alt=""
-      loading="lazy"
-      width="400"
-      height="400"
-      style="width: 330px; height: auto;"
-    >
-    <div class="space-y-1 mt-4">
-      <p class="text-[20px]">Martin Rosenberg</p>
-      <p class="text-gray-500">Head of sales and marketing</p>
-      <p>
-        <a href="mailto:mr@nordicfirefly.com" class="underline hover:opacity-70">
-          mr@nordicfirefly.com
-        </a>
-      </p>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
 </section>
-
 
 <section class="p-10 mt-20 mb-20">
   <div class="flex flex-col lg:flex-row gap-10">
-    <!-- Venstre kolonne -->
     <div class="flex-1 flex flex-col gap-4">
       <p class="mt-4 text-[25px]">Skal vi hjælpe jeres virksomhed næste gang?</p>
       <p>
         Hos Nordic Firefly sælger vi vores egen innovation, Lightpost, og vi tilbyder også at integrere vores unikke teknologi direkte i jeres produkter. Ønsker I, at vi hjælper jeres virksomhed med dette, er I velkomne til at kontakte os.
       </p>
-      <div>     <a href="/kontakt"> <Button class="w-auto px-6">KONTAKT OS</Button></a>
-</div>
+      <div>
+        <a href="/kontakt"><Button class="w-auto px-6">KONTAKT OS</Button></a>
+      </div>
     </div>
 
-    <!-- Højre kolonne -->
     <div class="flex-1 flex flex-col gap-4">
       <p class="mt-4 text-[25px]">Se alle vores tidligere cases her og hvad vi tilbyder.</p>
-	  
-     <a href="/produkt" class="flex items-center mt-4 text-[25px] gap-2">
-  <img src={Arrow.src} alt="">
-  <span>Vores services & løsninger</span>
-</a>
-
-<a href="/cases" class="flex items-center mt-4 text-[25px] gap-2">
-  <img src={Arrow.src} alt="">
-  <span>CASES</span>
-</a>
-
+      <a href="/produkt" class="flex items-center mt-4 text-[25px] gap-2">
+        <img src={Arrow.src} alt="">
+        <span>Vores services & løsninger</span>
+      </a>
+      <a href="/cases" class="flex items-center mt-4 text-[25px] gap-2">
+        <img src={Arrow.src} alt="">
+        <span>CASES</span>
+      </a>
     </div>
   </div>
 </section>
 
-
-
 </body>
-
- 
 </MainLayout>
-<script>
 
+<script>
   function countUp(id, end, duration = 3000) {
     const el = document.getElementById(id);
     let start = 0;
@@ -261,9 +191,7 @@ import Arrow from "~/assets/images/arrow.svg";
     }, 20);
   }
 
-  // Funktion som observerer sektionen
   const statsSection = document.getElementById('stats-section');
-
   const observer = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach(entry => {
@@ -271,33 +199,27 @@ import Arrow from "~/assets/images/arrow.svg";
           countUp('count1', 1500);
           countUp('count2', 42500);
           countUp('count3', 10);
-          observer.unobserve(entry.target); // sørger for animation kun kører én gang
+          observer.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.5 } // 
+    { threshold: 0.5 }
   );
+  observer.observe(statsSection);
 
- observer.observe(statsSection);
+  // --- PRODUKT SLIDESHOW ---
+  const produktSlideshow = document.getElementById("slideshow-produkter");
+  const produktImages = produktSlideshow.dataset.images.split(",");
+  let produktIndex = 0;
 
-// ---- PRODUKT SLIDESHOW (ASTRO-SIKKER) ----
-const produktSlideshow = document.getElementById("slideshow-produkter");
+  function nextProduktImage() {
+    produktSlideshow.style.opacity = 0;
+    setTimeout(() => {
+      produktIndex = (produktIndex + 1) % produktImages.length;
+      produktSlideshow.src = produktImages[produktIndex];
+      produktSlideshow.style.opacity = 1;
+    }, 500);
+  }
 
-// læs billed-urls fra data-attributten
-const produktImages = produktSlideshow.dataset.images.split(",");
-
-let produktIndex = 0;
-
-function nextProduktImage() {
-  produktSlideshow.style.opacity = 0;
-
-  setTimeout(() => {
-    produktIndex = (produktIndex + 1) % produktImages.length;
-    produktSlideshow.src = produktImages[produktIndex];
-    produktSlideshow.style.opacity = 1;
-  }, 500);
-}
-
-setInterval(nextProduktImage, 4000);
-
+  setInterval(nextProduktImage, 4000);
 </script>
